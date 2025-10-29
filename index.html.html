@@ -78,7 +78,7 @@
     .profile { text-align:center; padding:20px 10px; border-radius:25px; }
     .profile h2 { font-size:20px; font-weight:700; color: var(--primary-color); letter-spacing:1px; }
     .profile-details { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:15px; color:#ddd; }
-    .profile-pic { width:90px; height:90px; border-radius:50%; background:#ccc url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop') center/cover; border:3px solid var(--primary-color); box-shadow: 0 0 15px rgba(0,198,255,0.5); }
+    .profile-pic { width:90px; height:90px; border-radius:50%; background:#ccc url('https://th.bing.com/th/id/OIP.OS6S0fZ_xl_6c0l5_TmIiQHaE7?w=265&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3') center/cover; border:3px solid var(--primary-color); box-shadow: 0 0 15px rgba(0,198,255,0.5); }
 
     .stats p { margin:3px 0; font-size:14px; }
     .buttons { margin-top:20px; }
@@ -127,6 +127,110 @@
     .social-icons a.youtube { background: linear-gradient(135deg, #ff0000, #cc0000); }
     .social-icons a.tiktok { background: linear-gradient(135deg, #000000, #fe2c55); }
     .social-icons a:hover { transform: scale(1.15) rotate(5deg); box-shadow: 0 8px 25px rgba(255,255,255,0.3); }
+    .social-icons a.whatsapp{ background: linear-gradient(135deg,#fe2c55, #fe2c55); }
+    .social-icons a.github{ background: linear-gradient(135deg,#000000, #333333); }
+    .social-icons a.vlearner{ background: linear-gradient(135deg,#4caf50, #087f23); }
+    .social-icons a.gmail{ background: linear-gradient(135deg,#d44638, #a83224); }
+    .social-icons a.Claude-ai{ background: linear-gradient(135deg,#ffa500, #cc8400); }
+    .social-icons a.chatgpt{ background: linear-gradient(135deg,#00ff7f, #00cc66); }
+    .social-icons a.Geminai{ background: linear-gradient(135deg,#8a2be2, #5d1aab); }
+ 
+        /* Basic CSS to position and style the chat window */
+        #chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            height: 450px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+        }
+
+        #chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-weight: bold;
+        }
+
+        #chat-box {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 15px;
+            max-width: 80%;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #e2e2e2;
+            color: #333;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        #chat-input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        #user-input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #send-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="chat-container">
+        <div id="chat-header">
+            AI Assistant
+        </div>
+        <div id="chat-box">
+            <div class="message bot-message">Hello! Ask me anything about your project.</div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    </body>
+</html>  
+
   </style>
 </head>
 
@@ -148,7 +252,7 @@
             <p><strong>6</strong> following</p>
           </div>
         </div>
-        <h3>THE COLLINES</h3>
+        <h3>THE COLLINES TECHS</h3>
         <div class="buttons">
           <button class="edit">Edit profile</button>
           <button class="share">Share profile</button>
@@ -256,12 +360,33 @@
     <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
     <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
     <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="Claude-ai"><i class="fab fa-claude-ai"></i></a>
   </div>
 
   <div class="social-icons right">
     <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
     <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="github"><i class="fab fa-github"></i></a>
+    <a href="#" class="vlearner"><i class="fab fa-vlearner"></i></a>
+    <a href="#" class="gmail"><i class="fab fa-gmail"></i></a>
+    <a href="#" class="chatgpt"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="Geminai"><i class="fab fa-Geminai"></i></a>
   </div>
+
+  <div id="chat-container">
+        <div id="chat-header">
+            AI Assistant
+        </div>
+        <div id="chat-box">
+            <div class="message bot-message">Hello! Ask me anything about your project.</div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
 
   <script>
     // 3D rotation
@@ -342,6 +467,84 @@
         }, 300);
       });
     });
+
+  
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+
+    // Function to add a message to the chat box
+    function addMessage(text, sender) {
+        const msgDiv = document.createElement('div');
+        msgDiv.classList.add('message');
+        msgDiv.classList.add(sender + '-message');
+        msgDiv.textContent = text;
+        chatBox.appendChild(msgDiv);
+        // Scroll to the bottom to show the newest message
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // THIS IS THE CRITICAL FUNCTION: Simulates the bot's response
+    async function getBotResponse(userText) {
+        // -------------------------------------------------------------------
+        // 🚨 INTEGRATION POINT: This is where you would call an external API!
+        // -------------------------------------------------------------------
+        
+        // 1. **Option 1: Hardcoded/Simple Response (For testing only)**
+        if (userText.toLowerCase().includes('hello') || userText.toLowerCase().includes('hi')) {
+            return "Hi there! I'm a simple bot. How can I assist you?";
+        } else if (userText.toLowerCase().includes('project')) {
+            return "I can help with code snippets and structure. What part of the project are you working on?";
+        } else {
+            // 2. **Option 2: Actual API Call (The correct way for a real bot)**
+            /*
+            try {
+                const response = await fetch('YOUR_BACKEND_API_ENDPOINT', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: userText })
+                });
+                const data = await response.json();
+                return data.botReply; // Assumes your API returns a JSON object with 'botReply'
+            } catch (error) {
+                console.error("API Error:", error);
+                return "Sorry, I'm having trouble connecting right now.";
+            }
+            */
+
+            // Default fallback for the hardcoded example
+            return "I don't have a programmed answer for that yet. Try asking about the 'project' or saying 'hello'.";
+        }
+    }
+
+    // Function executed when the user sends a message
+    async function sendMessage() {
+        const userText = userInput.value.trim();
+        if (userText === '') return;
+
+        // 1. Display user message
+        addMessage(userText, 'user');
+        
+        // 2. Clear input
+        userInput.value = '';
+
+        // 3. Get bot response and display it (with a slight delay for realism)
+        const botReply = await getBotResponse(userText);
+
+        setTimeout(() => {
+            addMessage(botReply, 'bot');
+        }, 500); // 0.5 second delay
+    }
+
+    // Event listener for the Send button
+    sendBtn.addEventListener('click', sendMessage);
+
+    // Event listener for the Enter key in the input field
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });  
   </script>
 </body>
 </html>
